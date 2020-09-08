@@ -1,6 +1,6 @@
 #include "Character.hh"
 
-Character::Character(short int health, uint32_t strength, uint32_t exp, short int luck, uint32_t speed) 
+Character::Character(short int health, uint32_t strength, uint32_t exp, short int luck, uint32_t speed)
 {
     this->health = health;
     this->strength = strength;
@@ -11,7 +11,7 @@ Character::Character(short int health, uint32_t strength, uint32_t exp, short in
 
 Character::~Character()
 {
-    //delete
+    //delete 
 }
 
 short int Character::GetHealth() const
@@ -19,7 +19,7 @@ short int Character::GetHealth() const
     return health;
 }
 
-uint32_t Character::GetStrength() const
+uint32_t Character::GetStrenght() const
 {
     return strength;
 }
@@ -34,21 +34,19 @@ uint32_t Character::GetSpeed() const
     return speed;
 }
 
-short int Character:: GetLuck() const
+short int Character::GetLuck() const
 {
     return luck;
 }
 
-std::string Character :: GetLore() const
+std::string Character::GetLore() const
 {
     return lore;
 }
 
-void Character::GetDamage(short damage)
+void Character::GetDamage(short int damage)
 {
-    health -= (health - damage) >= 0 ? damage : 0; // ? pregunta si eso es verdad
-    //si si se cumple la condición, le restamos el damage
-    // : (si no) no le restes nada
+    health -= (health - damage) >= 0 ? damage : 0;    
 }
 
 void Character::SetLore(std::string lore)
